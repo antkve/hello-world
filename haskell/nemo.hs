@@ -5,4 +5,4 @@ intisinbounds ((lowx, lowy), (highx, highy)) (x, y) = x `elem` [lowx..highx] && 
 newandinbounds xs queue searched mapBounds = filter (intisinbounds mapBounds) $ filter (not . flip elem (queue ++ searched)) xs
 search mapBounds searched [centre] = centre
 search mapBounds searched (centre:queue) = search mapBounds (centre:searched) 
-                                                                                   $ queue ++ newandinbounds (surrounding8of centre) queue (centre:searched) mapBounds
+                $ queue ++ newandinbounds (surrounding8of centre) queue (centre:searched) mapBounds
