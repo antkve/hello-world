@@ -1,0 +1,2 @@
+This is flea.cpp, a sidescrolling platformer played in the terminal, and my first project in C++. It utilizes the NCurses library for terminal graphics, and loads the level from a separate level file. It's called flea.cpp because the way the player jumps and moves around makes it seem like a flea.
+![alt text](https://i.imgur.com/skc7zny.png)
