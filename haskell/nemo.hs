@@ -1,4 +1,4 @@
-nemo worldList  = search ((0, 0), (4, 9)) [] (getallthatare (==1) worldList)
+nemo worldList  = search ((0, 0), (4, 9)) [] (getallthatare (=='#') worldList)
 getallthatare f xyss = map fst $ filter ( f . snd ) xyss
 surrounding8of (x, y) = [(x1, y1) | x1 <- [x-1..x+1], y1 <- [y-1..y+1]]
 intisinbounds ((lowx, lowy), (highx, highy)) (x, y) = x `elem` [lowx..highx] && y `elem` [lowy..highy]
