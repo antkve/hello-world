@@ -1,0 +1,643 @@
+/* HEADER */
+html {
+	font-size: 13px;
+	overflow-x: auto;
+}
+body {
+	height: 400vh;
+	margin: 0px;
+	
+	min-width: 700px;
+}
+#fakeheader {
+	position: relative;
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	z-index: -1;
+	
+}
+#fakelogo {
+	
+	height: 5rem;
+	min-width:20.5rem;
+}
+#fakemenu {
+	min-width: 30.98rem;
+	height: 5rem;
+}
+header {
+	min-width: 700px;
+	display: flex;
+	background-color: #FFFFFF;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 5rem;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	z-index: 9999;
+	/*box-shadow: 0px 3px 20px black;*/
+	padding-bottom: 1.3rem;
+	margin: 0px 0px 0px 0px;
+}
+
+.shrink {
+	height: 2rem;
+	background-color: #00ff00;
+}
+
+@keyframes fade-in {
+	from { opacity: 0;}
+	to { opacity: 1;}
+}
+@keyframes icon-spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(720deg);
+	}
+}
+@keyframes icon-spindrift {
+	0% {
+		opacity: 0;
+		left: 20rem;
+		transform: rotate(0deg);
+	}
+	100% {
+		opacity: 1;
+		left: 0px;
+		transform: rotate(719deg);
+	}
+}
+@keyframes fade-in-from-right {
+	
+	0% {
+		left: 100px;
+		opacity: 0;
+	}
+	100%{
+		left: 0px;
+		opacity: 1;
+	}
+	
+}
+@keyframes fade-in-from-left {
+	
+	0% {
+		right: 100px;
+		opacity: 0;
+	}
+	100%{
+		right: 0px;
+		opacity: 1;
+	}
+	
+}
+#logo {
+	padding-right: 2rem;
+	top: 1rem;
+	left: 1rem;
+	text-decoration: none;
+	border:0;
+	position: relative;
+	height: 5rem;
+}
+
+#icon {
+	position: relative;
+	left: 20rem;
+	width: 5.4rem;
+	animation: icon-spindrift 0.6s linear 0s, icon-spin 1.2s ease-out 0.6s;
+	
+	animation-fill-mode: forwards;
+}
+
+#logotext {
+	border:0;
+	font-family: "Share Tech Mono";
+	font-weight: 100;
+	font-size: 3.5rem;
+	text-decoration: none;
+	position: relative;
+	bottom: 2.2rem;
+	right: 0.625rem;
+	color: red;
+}
+
+#logoa, #logor, #logok, #logoi, #logon, #logoe {
+	position: relative;
+	left: 100px;
+	opacity:0;
+	animation: fade-in-from-right 0.25s ease-out 1s;
+	animation-fill-mode: forwards;
+}
+#logoa { animation-delay: 1.3s;}
+#logor { animation-delay: 1.45s;}
+#logok { animation-delay: 1.6s;}
+#logoi { animation-delay: 1.75s;}
+#logon { animation-delay: 1.9s;}
+#logoe { animation-delay: 2.05s;}
+
+
+#mainmenu {
+	max-width: 40rem;
+	min-width: 32.2rem;
+	flex: 1 1 32.2rem;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: nowrap;
+	font-size: 70%;
+	opacity: 0;
+	border: none;
+	position: relative;
+	top: 1.15rem;
+	right: 0.625rem;
+	height: 5rem;
+	padding: 0rem 0.3125rem;
+	animation: fade-in 1s ease-out 3s forwards;
+	
+}
+
+.menubutton {
+	border:none;
+	position:relative;
+	cursor: pointer;
+	background-color:#FFFFFF;
+	height: 4rem;
+	padding: 0px;
+	margin: 0px 0.3125rem;
+	
+}
+.menubutton:focus, .menubutton::-moz-focus-inner {
+	
+	border: 0;
+	outline: none;
+}
+#workbutton {
+	width: 10rem;
+}
+#aboutbutton {
+	width: 14rem;
+}
+#goalsbutton {
+	width: 10rem;
+}
+#contactbutton {
+	width: 10rem;
+}
+
+.buttonline {
+	margin: -0.5rem;
+	background-color: #FFFFFF;
+	position: relative;
+	text-align: center;
+	height: 2.5rem;
+	
+	border-left: 2px solid #000000;
+	padding-top: 1.15rem;
+}
+.lastline {
+	border-left: 0px;
+}
+
+
+
+
+.menubutton div span{
+	font-family: "Share Tech Mono";	
+	font-weight: 100;
+	font-size: 1.15rem;
+	border-bottom: 3px solid rgba(255, 0, 0, 0);
+	border-top: 3px solid #FFFFFF;
+	-webkit-transition: border 0.5s ease;
+  	transition: border 0.5s ease;
+  	 
+  	position: relative;
+  	white-space:nowrap;
+  	height: 2rem;
+  	
+}
+
+.menubutton:hover div span{
+	
+	border-top: 2px solid #FFFFFF;
+	border-bottom: 2px solid rgba(255, 0, 0, 1);
+	
+}
+
+@media screen and (min-width: 49.5rem) {
+	header {
+		display: inline-block;
+	}
+	#logo {
+		float: left;
+	}
+	#mainmenu {
+		float: right;
+	}
+}
+	
+@media handheld and (orientation: portrait) and (min-width:640px){
+	
+	html {
+		font-size: 20px;
+	}
+}
+
+
+/* END OF HEADER */
+
+/* SECTION 1 -- INTRO */
+
+#intro {
+	overflow-y:visible;
+	width: auto;
+	top: 0rem;
+	height: 100vh;
+	z-index: 1;
+	background: white;
+	min-width: 700px;
+}
+
+h1 {
+	z-index: 1;
+	text-decoration: under;
+	position: relative;
+	font-family: "Poppins";
+	font-weight: heavy;
+	font-size: 5.5vh;
+	color: #333333;
+	width: auto;
+	display: inline-block;
+	margin-top: 10vh;
+	margin-left: 10vh;
+	margin-right: 10vh;
+	opacity: 0;
+	
+	animation: fade-in 1s ease 3.4s;
+	animation-fill-mode: forwards;
+}
+#header1 {
+	padding: 10px;
+	width: auto;
+	padding-bottom: 0px;
+}
+
+.tapered-line-red {
+	width: 100%;
+	border: none;
+	height: 0.2rem;	
+	position: absolute;
+	
+	background: red;
+	background: radial-gradient(red 30%, white 70%);
+	background: -moz-radial-gradient(red 30%, white 70%);
+	background: -webkit-radial-gradient(red 30%, white 70%);
+	background: -o-radial-gradient(red 30%, white 70%);
+}
+@keyframes leftwobble {
+	0% { left: 8vh;}
+	40% { left:6vh;}
+	80% { left: 8vh;}
+	90% { left: 3vh; }
+	100% { left: 8vh; }
+}
+
+@keyframes rightwobble {
+	0% { right: 8vh;}
+	40% { right:6vh;}
+	80% { right: 8vh;}
+	90% { right: 3vh; }
+	100% { right: 8vh; }
+}
+#allleftbrackets {
+	z-index: 1;
+	top: 0px;
+	left: 0px;
+	position: absolute;
+	opacity: 0;
+	animation: fade-in-from-right 1s ease-in 4s;
+	animation-fill-mode: forwards;
+}
+
+#allrightbrackets {
+	top: 0px;
+	right: 0px;
+	z-index: 1;
+	position: absolute;
+	opacity: 0;
+	animation: fade-in-from-left 1s ease-in 4s;
+	animation-fill-mode: forwards;
+}
+.rightbrackets {
+	position: absolute;
+	font-family: "Poppins";
+	font-size: 8vh;
+	font-weight: bold;
+	color: #ff4444;
+	z-index: 2;
+	right: 8vh;
+	
+	animation: rightwobble 4s ease 6s infinite;
+}
+.leftbrackets {
+	position: absolute;
+	font-family: "Poppins";
+	font-size: 8vh;
+	font-weight: bold;
+	color: #ff4444;
+	z-index: 2;
+	left: 8vh;
+	
+	animation: leftwobble 4s ease 6s infinite;
+}
+#lcb {
+	top: 20vh;
+	animation-delay: 0s;
+}
+#lsb {
+	top: 33vh;
+	animation-delay: 0.2s;
+}
+#lab {
+	top: 46vh;
+	animation-delay: 0.4s;
+}
+#lrb {
+	top: 59vh;
+	animation-delay: 0.6s;
+}
+#lfs {
+	top: 72vh;
+	animation-delay: 0.8s;
+}
+#lbs {
+	top: 85vh;
+	animation-delay: 1s;
+}
+#rcb {
+	top: 20vh;
+	animation-delay: 0s;
+}
+#rsb {
+	top: 33vh;
+	animation-delay: 0.2s;
+}
+#rab {
+	top: 46vh;
+	animation-delay: 0.4s;
+}
+#rrb {
+	top: 59vh;
+	animation-delay: 0.6s;
+}
+#rfs {
+	top: 72vh;
+	animation-delay: 0.8s;
+}
+#rbs {
+	top: 85vh;
+	animation-delay: 1s;
+}
+
+
+
+p {
+	position: relative;
+	width: auto;
+	
+	margin: 0vh 20% 0.7rem 20%;
+	font-size: 3vh;
+	line-height: 4.3vh;
+	font-family: "Poppins";
+	top: 0rem;
+	z-index: 10;
+	opacity: 0;
+	animation: fade-in 1s ease 4s;
+	animation-fill-mode: forwards;
+}
+
+.bottomline {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	
+	bottom:0px;
+	min-width: 700px;
+	
+}
+.nextPageText {
+	position: absolute;
+	bottom: 12vh;
+	right: 0px;
+	left: 0px;
+	text-align: center;
+	font-family: "Poppins";
+	z-index:10;
+	font-size: 1rem;
+	color: #FF4A4A;	
+	z-index: 1001;
+	opacity: 0;
+	animation: fade-in 1s ease 4s;
+	animation-fill-mode: forwards;
+}
+.nextPageButton {
+	min-width: 700px;
+	display: inline-block;
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	height: 25vh;
+	left: 0px;
+	text-align: center;
+	opacity: 0;
+	
+	animation: fade-in 1s ease 4s;
+	animation-fill-mode: forwards;
+	border: none;
+	outline: 0;
+	background-color: #FFFFFF;
+}
+.nextPageButton img {
+	position: relative;
+	top: 5vh;
+}
+.nextPageButton:focus {
+	outline:none;
+}
+
+
+.nextPageButton::-moz-focus-inner {
+  border: 0;
+  outline: none;
+}
+
+
+.section-line {
+	
+	display:block;
+	width: 100%;
+    border:none;
+    height: 2px;
+    background: red;
+    
+    position: absolute;
+    bottom: 0px;
+	opacity: 0;
+	animation: fade-in 1s ease 2.7s;
+	animation-fill-mode: forwards;
+    /*background: radial-gradient(red 30%, white 70%);*/
+}
+
+.fleurl {
+	height: auto;
+	float: left;
+	overflow-x: hidden;
+	position: absolute;
+	left: 0rem;
+	bottom: -10.1rem;
+}
+.fleurr {
+	
+	height: auto;
+	overflow-x: hidden;
+	float: right;
+	position: absolute;
+	right: 0rem;
+	bottom: -10.1rem;
+}
+.fleurl img {
+	height: 18.2rem;
+	position: relative;
+	
+	opacity: 0;
+	animation: fade-in-from-left 1s ease 2.5s;
+	animation-fill-mode: forwards;
+	
+	
+}
+.fleurr img {
+	position: relative;
+	height: 18.2rem;
+	
+	opacity: 0;
+	animation: fade-in-from-right 1s ease 2.5s;
+	animation-fill-mode: forwards;
+}
+
+#goals1 {
+	left: 0;
+	right: 0;
+	height: calc(100vh - 6.27rem);
+	background: red;
+	z-index: -1;
+	
+}
+
+.goalsrelative {
+	position: relative;
+	top: 12.54rem;
+}
+
+#rightarrow {
+	position: absolute;
+	border: none;
+	bottom: 46vh;
+	right: 7vw;
+	cursor: pointer;
+	background: none;
+}
+
+#rightarrow img {
+	width: 7rem;
+	
+}
+
+
+#goalsheading {
+	position: relative;
+	height: auto;
+	padding-top:0;
+	text-align: center;
+}
+#goalsheading div{
+	position: relative;
+	font-size: 7.5vh;
+	top: 5vh;
+	font-weight:bold;
+	font-family: "Share Tech Mono";
+	color: #FFFFFF;
+	top: 0px;
+	margin-bottom: 0vh;
+}
+
+.tapered-line-white {
+	position: relative;
+	border: none;
+	height: 0.2rem;
+	margin: 0px 35vw;
+	background: white;
+	background: -webkit-gradient(linear, 0 0, 100% 0, from(red), to(red), color-stop(50%, white));
+	
+}
+.bracketl {
+	position: relative;
+	height: 15vh;
+	right: 2vw;
+	top: 4.5vh;
+	z-index: 10;
+}
+#curlbracketlimg {
+	position: relative;
+	height: 15vh;
+	
+	opacity: 0;
+}
+.bracketlfade {
+	
+	animation: fade-in-from-left 2s ease 0s;
+	animation-fill-mode: forwards;
+}
+.bracketr {
+	position: relative;
+	height: 15vh;
+	left: 2vh;
+	top: 4.5vh;
+	z-index: 10;
+}
+#curlbracketrimg{
+	position: relative;
+	height: 15vh;
+	
+	opacity: 0;
+}
+.bracketrfade {
+	
+	animation: fade-in-from-right 2s ease 0s;
+	animation-fill-mode: forwards;
+	
+}
+#about {
+	
+	width: 100%;
+	heigh:calc(100vh - 6.27rem);
+	left: 0;
+	right: 0;
+	z-index: -2;
+	
+}
+.aboutrelative {
+	position: relative;
+	top: calc(100vh - 7.5rem);
+}
+
+.goalsstill {
+	position: fixed;
+	bottom: 0px;
+	top: auto;
+}
