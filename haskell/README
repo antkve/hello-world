@@ -1,4 +1,4 @@
 This is nemo.hs, a function for finding the 'nemo point' (the furthest ocean point from land) of a given tiled map quickly, and the first program I wrote in Haskell (and first functional program I wrote). It works using a breadth-first flood fill search, which starts with all the land points and chooses points next to the points currently chosen until it reaches the point which is furthest (8-way stepwise) from any land tile. Pretty neat.
 
-It's a great example of how much more concise and readable functional code can be than imperative code -- here's code using a similar approach, in C:
+It's a great example of how much more concise functional code can be than imperative code -- here's code using a similar approach, in C:
 https://www.reddit.com/r/dailyprogrammer/comments/6arlw4/20170512_chalenge_314_hard_finding_point_nemo/dhgvp2h/
